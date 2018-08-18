@@ -11,6 +11,9 @@ NBCalc <- function(train, test, rows, objective){
                        
   dat <- train[, rts, with = FALSE]                        # train data inside the function
   det <- test[, rows, with = FALSE]                        # test data inside the function
+  if(is.numeric(objective)){																	
+  	objective = colnames(train[, objective, with = FALSE]) # a fix for numeric objective values
+  	}
   det$p1 <- train[, mean(get(objective))]                  # overall probability of success / desired output. i.e churners for churn analysis
   p1 <- train[, mean(get(objective))]                      # overall probability of success / desired output. i.e churners for churn analysis
   nrowdet <- nrow(det)                                     # for data check
