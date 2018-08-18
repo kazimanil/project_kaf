@@ -4,6 +4,7 @@ loadfonts()
 theme_dt <- function(){
   theme_minimal() %+replace%
     theme(
+
     axis.line    = element_line(colour = "black", lineend = "square", linetype = "solid"  , size = 0.3),
     axis.text.x  = element_text(size = 11, colour = "darkseagreen1", family = "serif"),
     axis.text.y  = element_text(size = 11, colour = "darkseagreen1", family = "serif"),
