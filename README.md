@@ -23,6 +23,10 @@ Makes a prediction based on the training set using Naive Bayes algorithm.
 
 Calculates f1 scores either supplying TP, FP and FN values or Precision and Recall values.
 
+## auto_rep.R
+
+Replaces an old value with a new value in many columns from a specified data.table.
+
 ## Themes Included
 
 ### ggPlot Theme
