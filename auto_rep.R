@@ -5,10 +5,10 @@
 
 auto_rep = function(dt, pattern = NA, cols = NA, old_val, new_val){
 	require("data.table")
-	if(is.na(cols) & is.na(pattern)){
+	if(sum(is.na(cols)) > 0  & sum(is.na(pattern)) > 0 ){
 		stop() # either columns or pattern of columns must be specified
 	}
-	if(is.na(cols)){
+	if(sum(is.na(cols)) > 0 ){
 		cols = colnames(dt)[grepl(pattern = pattern, colnames(dt))]		
 	} # if pattern is supplied, columns are chosen from data.table.
 	new_vals = as.data.table(sapply(dt[, cols, with = FALSE], function(x){ifelse(x == old_val, new_val, x)}))
