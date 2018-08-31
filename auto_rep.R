@@ -12,7 +12,7 @@ auto_rep = function(dt, pattern = NA, cols = NA, old_val, new_val){
 		cols = colnames(dt)[grepl(pattern = pattern, colnames(dt))]		
 	} # if pattern is supplied, columns are chosen from data.table.
 	new_vals = as.data.table(sapply(dt[, cols, with = FALSE], 
-									function(x){ifelse(ifelse(is.na(x == oldval), TRUE, x == oldval), new_val, x)}
+									function(x){ifelse(ifelse(is.na(x == old_val), TRUE, x == old_val), new_val, x)}
 									))
 	dt[, (cols) := new_vals]
 	}
