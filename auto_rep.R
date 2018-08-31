@@ -1,6 +1,8 @@
 ## Created By: Kazım Anıl Eren
 ## Created On: 2018-08-30
+## Edited  On: 2018-08-31
 ## Target    : Automatically replaces values in many columns.
+## Edits     : Fixed various bugs and expanded capacity
 ## Function  :
 
 auto_rep = function(dt, pattern = NA, cols = NA, old_val, new_val){
@@ -12,7 +14,7 @@ auto_rep = function(dt, pattern = NA, cols = NA, old_val, new_val){
 		cols = colnames(dt)[grepl(pattern = pattern, colnames(dt))]		
 	} # if pattern is supplied, columns are chosen from data.table.
 	new_vals = as.data.table(sapply(dt[, cols, with = FALSE], 
-									function(x){ifelse(ifelse(is.na(old_val), is.na(x), x == old_val), new_val, x)}
+	                         Vectorize(function(x){ifelse(ifelse(is.na(old_val), is.na(x), x == old_val), new_val, x)})
 									))
 	dt[, (cols) := new_vals]
 	}
