@@ -11,6 +11,8 @@ auto_rep = function(dt, pattern = NA, cols = NA, old_val, new_val){
 	if(sum(is.na(cols)) > 0 ){
 		cols = colnames(dt)[grepl(pattern = pattern, colnames(dt))]		
 	} # if pattern is supplied, columns are chosen from data.table.
-	new_vals = as.data.table(sapply(dt[, cols, with = FALSE], function(x){ifelse(x == old_val, new_val, x)}))
+	new_vals = as.data.table(sapply(dt[, cols, with = FALSE], 
+									function(x){ifelse(ifelse(is.na(x == oldval), TRUE, x == oldval), new_val, x)}
+									))
 	dt[, (cols) := new_vals]
 	}
