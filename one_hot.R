@@ -16,7 +16,7 @@ one_hot = function(dt, cols){
     for(k in 1:nrow(uniquevals)){
       newcol = as.character(uniquevals[k, 1])
       dt[, (paste0(colnames(dt[, j, with = FALSE]), "_", newcol)) := 
-            ifelse(get(colnames(dt[, j, with = FALSE])) == uniquevals[k]$V1, 1, 0)]   
+            ifelse(is.na(get(colnames(dt[, j, with = FALSE]))), 0, ifelse(get(colnames(dt[, j, with = FALSE])) == uniquevals[k]$V1, 1, 0))]   
     }
   }
   rm(i, j, k, uniquevals, newcol);
