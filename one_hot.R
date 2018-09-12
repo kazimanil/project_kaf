@@ -15,11 +15,11 @@ one_hot = function(dt, cols, sep = "_"){
    uniquevals = uniquevals[which(!is.na(uniquevals))] # No need for NA columns.
    uniquevals = uniquevals[which(!uniquevals == "")]  # No need for empty columns. Should be extended with columns with only spaces.
    uniquevals = `colnames<-`(uniquevals, "V1")
-    for(k in 1:nrow(uniquevals)){
-      newcol = as.character(uniquevals[k, 1])
-      dt[, (paste0(colnames(dt[, j, with = FALSE]), sep, newcol)) := 
-            ifelse(is.na(get(colnames(dt[, j, with = FALSE]))), 0, ifelse(get(colnames(dt[, j, with = FALSE])) == uniquevals[k]$V1, 1, 0))]   
-    }
+   for(k in 1:nrow(uniquevals)){
+     newcol = as.character(uniquevals[k, 1]$V1)
+     dt[, (paste0(colnames(dt[, j, with = FALSE]), sep, newcol)) := 
+          ifelse(is.na(get(colnames(dt[, j, with = FALSE]))), 0, ifelse(get(colnames(dt[, j, with = FALSE])) == uniquevals[k]$V1, 1, 0))]   
+   }
   }
   rm(i, j, k, uniquevals, newcol);
   dt
