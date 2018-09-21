@@ -32,6 +32,16 @@ By 2018-08-31, it can also handle NA valus at high speed as well.
 
 One-Hot Encoding function for factor/character variables.
 
+### token_temizle.R
+
+Helps to clean tokens with specified rules from texts.
+
+### bosluk_temizle.R
+
+Helps to clean unnecessary white space. (If white space's length > 1 then reduce it to 1.)
+
+###
+
 ## Themes Included
 
 ### ggPlot Theme
