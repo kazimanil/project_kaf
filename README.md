@@ -37,8 +37,6 @@ Helps to clean tokens with specified rules from texts.
 
 Helps to clean unnecessary white space. (If white space's length > 1 then reduce it to 1.)
 
-###
-
 ## Themes Included
 
 ### gg Theme
@@ -48,6 +46,8 @@ An .R file which has my default ggplot2 schema.
 ### R Markdown Template & Theme
 
 A .RMd file which stores the default settings for a R Markdown document.
+
+An .R file which has my default ggplot2 schema.
 
 A .tex file which stores the default settings for my PDF outputs from R Markdown files.
 
