@@ -1,0 +1,39 @@
+---
+title: "ENTER TITLE HERE"
+author: "Kazım Anıl Eren"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  pdf_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+    df_print: kable
+    highlight: tango
+    includes:
+      in_header: preamble.tex
+---
+
+```{r setup, include = FALSE, echo = FALSE, warning = FALSE, error = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  error = FALSE,
+  results = 'asis',
+  fig.align = 'center',
+  fig.width = 10, 
+  fig.height = 5,
+  fig.pos = '!H'
+)
+```
+
+```{r Libraries, include=FALSE, echo = FALSE, warning = FALSE, error = FALSE}
+rm(list = ls()); gc()
+library('knitr');
+library('ggplot2');
+library('data.table');
+library('stringr');
+options(scipen=20);
+source('/home/kazimanil/Documents/projects/project_kaf/gg_theme.R');
+```

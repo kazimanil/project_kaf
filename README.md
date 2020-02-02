@@ -1,13 +1,10 @@
-# Hodja
+# Project KAF
 
-This repository aims to store generic functions created by LAAAPS team. It is possible that the codes are compiled within an R library in near future. This repository will include:
-
-* R or R Markdown themes
-* R functions
+In this repository I aim to store my default settings, customisations and custom functions. KAF stands for Kazım Anıl Functionality.
 
 ## Functions Included
 
-### dist_calc.R
+### dist_calc.R 
 
 Calculates the distance of two locations based on the longitude and latitudes.
 
@@ -44,10 +41,14 @@ Helps to clean unnecessary white space. (If white space's length > 1 then reduce
 
 ## Themes Included
 
-### ggPlot Theme
+### gg Theme
 
-An .R file which tries to beautify ggplots.
+An .R file which has my default ggplot2 schema.
 
-### R Markdown Theme
+### R Markdown Template & Theme
 
-A .CSS file which tries to beautify R Markdown files.
+A .RMd file which stores the default settings for a R Markdown document.
+
+A .tex file which stores the default settings for my PDF outputs from R Markdown files.
+
+A .CSS file which stores the default settings for my HTML outputs from R Markdown files.
