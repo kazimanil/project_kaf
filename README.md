@@ -37,8 +37,6 @@ Helps to clean tokens with specified rules from texts.
 
 Helps to clean unnecessary white space. (If white space's length > 1 then reduce it to 1.)
 
-###
-
 ## Themes Included
 
 ### gg Theme
