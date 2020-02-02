@@ -4,7 +4,7 @@ In this repository I aim to store my default settings, customisations and custom
 
 ## Functions Included
 
-### dist_calc.R 
+### dist_calc.R
 
 Calculates the distance of two locations based on the longitude and latitudes.
 
@@ -22,7 +22,7 @@ Calculates f1 scores either supplying TP, FP and FN values or Precision and Reca
 
 ### auto_rep.R
 
-Replaces an old value with a new value in many columns from a specified data.table. 
+Replaces an old value with a new value in many columns from a specified data.table.
 By 2018-08-31, it can also handle NA valus at high speed as well.
 
 ### one_hot.R
