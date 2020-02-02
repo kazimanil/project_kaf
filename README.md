@@ -37,6 +37,10 @@ Helps to clean tokens with specified rules from texts.
 
 Helps to clean unnecessary white space. (If white space's length > 1 then reduce it to 1.)
 
+### prime_number_detector.R
+
+A brute-force algorithm which finds out prime numbers until the given limit.
+
 ## Themes Included
 
 ### gg Theme
