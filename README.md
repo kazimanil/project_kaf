@@ -1,6 +1,6 @@
 # Project KAF
 
-In this repository I aim to store my default settings, customisations and custom functions. KAF stands for Kazım Anıl Functionality.
+This repo stores my custom solutions. KAF stands for Kazım Anıl Functions.
 
 ## Functions Included
 
