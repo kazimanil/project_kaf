@@ -1,17 +1,24 @@
+## Created By: Kazım Anıl Eren
+## Created On: 2018-08-16
+## Edited  On:
+## Target    : Makes a baseline prediction based on the training set using Naive Bayes algorithm.
+## Edits     : None
+## Function  :
+
 NBCalc <- function(train, test, rows, objective){
-  
-  stopifnot((is.character(rows) & is.character(objective)) | 
+
+  stopifnot((is.character(rows) & is.character(objective)) |
               (is.numeric(rows) & is.numeric(objective))) # stops if rows and objective is not in the same format
-  
+
   rts <- if(is.numeric(rows)){
     as.numeric(cbind(as.data.table(t(rows)), as.data.table(objective)))
   } else {
     as.character(cbind(as.data.table(t(rows)), as.data.table(objective)))
   }                                                        # rows to select
-                       
+
   dat <- train[, rts, with = FALSE]                        # train data inside the function
   det <- test[, rows, with = FALSE]                        # test data inside the function
-  if(is.numeric(objective)){																	
+  if(is.numeric(objective)){
   	objective = colnames(train[, objective, with = FALSE]) # a fix for numeric objective values
   	}
   det$p1 <- train[, mean(get(objective))]                  # overall probability of success / desired output. i.e churners for churn analysis

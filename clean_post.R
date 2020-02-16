@@ -1,3 +1,10 @@
+## Created By: Kazım Anıl Eren
+## Created On: 2018-09-11
+## Edited  On:
+## Target    : Cleans up tweets and instagram posts.
+## Edits     : None
+## Function  :
+
 # Adopted from rtweet::plain_tweets.R
 
 rm_fancy_apostrophes <- function(x) gsub(intToUtf8(8217), "'", x)
@@ -47,7 +54,7 @@ emj[, gulucuk := gsub("[:,:]", "", gulucuk)]
 emj <- emj[, kod2 := stringi::stri_escape_unicode(kod)]
 emj <- emj[order(-nchar(kod2))]
 
-gonderi_duzenleyici <- function(x) {
+clean_post <- function(x) {
   x <- rm_links(x)
   x <- rm_linebreaks(x)
   x <- rm_fancy_spaces(x)
@@ -62,4 +69,3 @@ gonderi_duzenleyici <- function(x) {
   # x <- enc2ascii(x)
   trim_ws(x)
 }
-

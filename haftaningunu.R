@@ -1,9 +1,17 @@
+## Created By: Kazım Anıl Eren
+## Created On: 2018-09-11
+## Edited  On:
+## Target    : Returns the day of the week in Turkish.
+## Edits     : None
+## Function  :
+
+
 hg <- function(x){
   x <- `Encoding<-`(as.character(x), "UTF-8")
-  if(x == 1){ 
+  if(x == 1){
       x = "Pazartesi"
   } else if (x == 2){
-      x = "Sali"  
+      x = "Sali"
   } else if (x == 3){
       x = "Çarsamba"
   } else if (x == 4){

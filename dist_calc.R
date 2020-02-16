@@ -1,4 +1,10 @@
-# Distance Calculator based on Latitude & Longitude of two locations.
+## Created By: Kazım Anıl Eren
+## Created On: 2018-08-16
+## Edited  On:
+## Target    : Distance Calculator based on Latitude & Longitude of two locations.
+## Edits     :
+## Function  :
+
 # Uses Haversine formula at https://www.movable-type.co.uk/scripts/latlong.html as reference
 
 dist_calc = function(lat1, len1, lat2, len2){

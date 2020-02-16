@@ -1,5 +1,9 @@
-# Time Difference Function.
-# Calculates the seconds difference between two dates in HH:MM:SS format.
+## Created By: Kazım Anıl Eren
+## Created On: 2018-08-31
+## Edited  On: 2020-02-02
+## Target    : Calculates the seconds difference between two dates in HH:MM:SS format.
+## Edits     :
+## Function  :
 
 time_dif = function(start_date, end_date){
 	hour_dif = as.numeric(substr(trimws(end_date), 1, 2)) - as.numeric(substr(trimws(start_date), 1, 2))
