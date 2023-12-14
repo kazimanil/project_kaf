@@ -13,7 +13,7 @@ gg_theme <- function(){
   theme_minimal() %+replace%
     theme(
 
-      axis.line    = element_line(colour = "black", lineend = "square", linetype = "solid"  , size = 0.3),
+      axis.line    = element_line(colour = "black", lineend = "square", linetype = "solid"  , linewidth = 0.3),
       axis.text.x  = element_text(size = 11, colour = "darkslategray", family = "serif"),
       axis.text.y  = element_text(size = 11, colour = "darkslategray", family = "serif"),
       axis.title.x = element_text(size = 15, colour = "darkslategray", family = "sans", margin = ggplot2::margin(0.5,0,0,0, "cm")),
