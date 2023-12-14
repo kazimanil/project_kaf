@@ -31,7 +31,7 @@ gg_theme <- function(){
 
       # panel.background = element_rect(fill = "darkslategray"),
       panel.border     = element_rect(fill = NA, colour = NA),
-      panel.grid.major = element_line(colour = "darkslategray", lineend = "square", linetype = "dotted" , size = 0.2),
+      panel.grid.major = element_line(colour = "darkslategray", lineend = "square", linetype = "dotted" , linewidth = 0.2),
       panel.grid.minor = element_line(colour = NA),
       panel.ontop = FALSE,
 
@@ -41,6 +41,7 @@ gg_theme <- function(){
 
       # plot.background =  element_rect(fill = "darkslategray"),
       plot.title      =  element_text(size = 20, colour = "darkslategray", family = "sans", margin = ggplot2::margin(0,0,0.5,0, "cm")),
+      plot.subtitle   =  element_text(size = 12, colour = "darkslategray", family = "sans", margin = ggplot2::margin(0,0,0.1,0, "cm")),
       plot.margin     =  unit(c(1,1,0.5,0.5), "lines")
     )
 }
